@@ -1,7 +1,6 @@
 <%= form_for([@article, @article.comments.build]) do |f| %>
   <p>
-  <%= f.label :commenter %><br>
-<%= f.text_area :commenter %>
+  <%= @user %>
   </p>
   <p>
     <%= f.label :body %><br>
