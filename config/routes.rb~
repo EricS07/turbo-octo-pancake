@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-
+	
 resources :articles do
         resources :comments
-end
   get 'user/profile'
 
   get 'users/profile'
@@ -10,6 +9,8 @@ end
   get 'users/profile'
 
   get 'home/index'
+
+  get 'articles'
 
   devise_for :users
   #get 'welcome/index'
