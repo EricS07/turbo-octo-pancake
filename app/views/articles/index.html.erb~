@@ -9,7 +9,6 @@
 <br>
 <%= link_to 'New article', new_article_path %>
 <div>
-<hr>
 <table>
   <tr>
     <th>Title</th>
@@ -28,11 +27,10 @@
               method: :delete,
               data: { confirm: 'Are you sure?' } %><% end %></td>
     </tr>
-
+<hr>
   <% end %>
 </table>
 </div>
-<hr>
 <br>
 <br>
 <%= link_to 'Back', home_index_path %>
