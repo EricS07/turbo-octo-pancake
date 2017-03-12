@@ -5,7 +5,7 @@
 #block{
 	text-align:center;
 }
-#b1,#b2,#b3{
+#b1,#b2{
 	width:30%;
 	padding: 1px;
 	display:inline-block;
