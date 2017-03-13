@@ -9,10 +9,13 @@
 <br>
 <%= link_to 'New article', new_article_path %>
 <div>
+<hr>
+
 <table>
   <tr>
     <th>Title</th>
     <th>Text</th>
+    <th>When</th>
     <th colspan="3"></th>
   </tr>
 
@@ -21,16 +24,18 @@
     <tr>
       <td><%= article.title %></td>
       <td><%= article.text %></td>
+      <td><%= time_ago_in_words(article.created_at) %>
       <td><%= link_to 'Show', article_path(article) %></td>
-      <td><% if current_user.admin? %><%= link_to 'Edit', edit_article_path(article) %></td>
+      <% if current_user.admin? %><td><%= link_to 'Edit', edit_article_path(article) %></td>
       <td><%= link_to 'Destroy', article_path(article),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %><% end %></td>
+              data: { confirm: 'Are you sure?' } %></td><% end %>
     </tr>
-<hr>
+
   <% end %>
 </table>
 </div>
+<hr>
 <br>
 <br>
 <%= link_to 'Back', home_index_path %>
