@@ -1,7 +1,7 @@
 <%= form_for([@article, @article.comments.build]) do |f| %>
   <p>
-  <%= f.label :commenter %><br>
-<%= f.text_area :commenter %>
+  <%= f.label("Commenting as ") %><br>
+<%= link_to current_user.username, nil %>
   </p>
   <p>
     <%= f.label :body %><br>

@@ -1,0 +1,24 @@
+<div style="text-align:right"><% if user_signed_in? %> Logged in as <%= current_user.username%> [<%= link_to 'Logout',  destroy_user_session_path, :method => :delete%>] <% end %></div>
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
+    <div class="comment_content">
+        <p><%= comment.user.username %></p>
+        <p><%= comment.body %></p>
+        <p><%= time_ago_in_words(comment.created_at) %></p>
+    </div>
+<% end %>
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
