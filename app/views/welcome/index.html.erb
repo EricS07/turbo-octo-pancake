@@ -1,5 +1,7 @@
 <title>Eric's Rails Application</title>
 <h1>Hello, welcome to my page!</h1>
 
+<% if user_signed_in? %><p><a class="btn btn-lg btn-primary" href="/home" role="button">Continue</a>
+  <% else %>
 <p><a class="btn btn-lg btn-primary" href="/users/sign_up" role="button">Sign up!</a>
-
+<% end %>
