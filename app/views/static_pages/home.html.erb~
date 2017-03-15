@@ -1,0 +1,14 @@
+<div class="center jumbotron">
+  <h1>Welcome to Ruby-R3</h1>
+
+  <h2>
+    This is the home page for the
+    <a href="ruby-r3.herokuapp.com">Ruby-R3</a>
+    application.
+  </h2>
+  <lu>What's in there?
+	<li><%= link_to "Articles!", articles_path %></li>
+  </lu>
+</div>
+
+

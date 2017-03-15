@@ -1,6 +1,3 @@
 <h1>Home#index</h1><br>
 <%= link_to 'Articoli', controller: 'articles' %><br>
 <br>
-<div>
-<loginr><% if user_signed_in? %> Logged in as <%= current_user.username%> [<%= link_to 'Logout',  destroy_user_session_path, :method => :delete%>] <% end %></login>
-</div>
